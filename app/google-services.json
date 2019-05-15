@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "93374495095",
+    "firebase_url": "https://vce-free-banner.firebaseio.com",
+    "project_id": "vce-free-banner",
+    "storage_bucket": "vce-free-banner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93374495095:android:d6bcbae0fdf33fb0",
+        "android_client_info": {
+          "package_name": "com.windingo.visualcalculationeditor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93374495095-gkanmdmdfbdeau2f87psim3dgmsoahab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9gfxiNil1IeZfF27GPjl8yFJyGjvq0W8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

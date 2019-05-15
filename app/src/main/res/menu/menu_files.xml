@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.windingo.vc.MainActivity">
+    <item
+        android:id="@+id/action_location"
+        android:title="Go to local storage"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_newfile"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Add new item"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_multiple_delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="Delete selected items"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_select_files"
+        android:orderInCategory="100"
+        android:title="Select files"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_select_all"
+        android:orderInCategory="100"
+        android:title="Select all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_unselect_all"
+        android:orderInCategory="100"
+        android:title="Unselect all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_cancel_selection_mode"
+        android:orderInCategory="100"
+        android:title="Cancel selection mode"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Visual Calculator</string>
+    <string-array name="result_precision">
+        <item>no rounding</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="table_precision">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="calculation_font">
+        <item>Sans-serif</item>
+        <item>Serif</item>
+        <item>Casual</item>
+    </string-array>
+    <string-array name="color_theme">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="color_theme_3">
+        <item>System</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="custom_format">
+        <item>as is</item>
+        <item>time</item>
+        <item>degrees</item>
+    </string-array>
+    <string-array name="notation_options">
+        <item>default</item>
+        <item>decimal</item>
+        <item>fraction</item>
+    </string-array>
+    <string-array name="function_options">
+        <item>Function returns a value</item>
+        <item>Void function</item>
+    </string-array>
+</resources>

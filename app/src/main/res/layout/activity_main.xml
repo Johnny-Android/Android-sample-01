@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="com.windingo.vc.MainActivity">
+
+    <view
+        android:id="@+id/inputAreaView"
+        class="com.windingo.vc.InputAreaView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <EditText
+        android:id="@+id/editTextInputEater"
+        android:imeOptions="flagNoExtractUi"
+        android:layout_width="0dip"
+        android:layout_height="100dp"
+        android:layout_marginTop="-200dp"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/gotoPlayMarket"
+        style="@android:style/Widget.Button"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:text="to Play Market.."
+        android:textColor="@color/colorSettingsItemInfo"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/filesView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Space
+            android:id="@+id/fileListLeftSpace"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/filesViewRect"
+            android:background="@color/colorSettingsPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/files_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:navigationIcon="?attr/actionModeCloseDrawable"
+                app:title="Action"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/colorPrimaryDarkText">
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/files_toolbarLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDarkText"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:title="Action"
+                app:titleTextColor="@color/colorPrimaryDark"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:navigationIcon="?attr/actionModeCloseDrawable">
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:selectAllOnFocus="true"
+                    tools:text="New calcullation file name"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonCancelNewFile"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cancel"/>
+
+                    <Button
+                        android:id="@+id/buttonSaveAsNewFile"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/fileListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorFileList"
+                    android:choiceMode="multipleChoiceModal"
+                    android:divider="@color/colorFileListDivider"
+                    android:dividerHeight="1px"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp">
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/settingsViewRect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSettingsPanel"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/options_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:navigationIcon="?attr/actionModeCloseDrawable"
+                app:title="Options"
+                app:titleTextColor="@color/colorPrimaryDarkText">
+
+                <TextView
+                    android:id="@+id/options_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="Options"
+                    android:textColor="@color/colorPrimaryDarkText"
+                    android:textSize="26sp"
+                    android:visibility="gone"/>
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/options_toolbarLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDarkText"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:navigationIcon="?attr/actionModeCloseDrawable"
+                app:title="Options"
+                app:titleTextColor="@color/colorPrimaryDark">
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/options_precision_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Rounding precision:"
+                android:textColor="@color/colorSettingsItemInfo"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:id="@+id/settings_precision_expr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_precision_expr_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="decimal places in expression"
+                    android:textColor="@color/colorSettingsItemInfo"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPrecisionExpr"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_precision_table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_precision_table_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="decimal places in table"
+                    android:textColor="@color/colorSettingsItemInfo"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPrecisionTable"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_convert_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_convert_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Convert to"
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerConvertTo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_notation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_notation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Notation"
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerNotation"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_function_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_function_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerFunctionOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_font_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_font_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Font"
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerFont"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_theme_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/options_theme_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Theme"
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerTheme"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switchFractions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Calculate in fractions"
+                android:textColor="@color/colorSettingsItemInfo"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switchColouredButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Coloured buttons"
+                android:textColor="@color/colorSettingsItemInfo"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switchSoundEffects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Sound effects"
+                android:textColor="@color/colorSettingsItemInfo"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:id="@+id/settings_reset_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/colorSettingsItemInfo"/>
+
+                <Button
+                    android:id="@+id/resetCustomFormat"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="Reset"
+                    android:textColor="@color/colorSettingsItemInfo"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingsBottomSpace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSettingsPanel"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.widget.RelativeLayout>
